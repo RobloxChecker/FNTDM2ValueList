@@ -1,248 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FNTD Modded Value List</title>
-    <style>
-        /* General styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #333;
-        }
-
-        header {
-            background-color: #222;
-            color: white;
-            padding: 30px 0;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 3em; /* Larger header text */
-        }
-
-        table {
-            width: 90%; /* Wider table */
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px; /* Rounded corners */
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 20px; /* Increased padding */
-            border: 1px solid #ddd;
-            text-align: center;
-            font-size: 1.5em; /* Larger font size */
-        }
-
-        th {
-            background-color: #333;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #f9f9f9;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        /* Styling for specific categories */
-        .uncommon {
-            color: #ffcc00;
-            font-weight: bold;
-        }
-
-        .rare {
-            color: #ffd700;
-            font-weight: bold;
-        }
-
-        .epic {
-            color: #800080;
-            font-weight: bold;
-        }
-
-        .mythical {
-            color: #ff8c00;
-            font-weight: bold;
-        }
-
-        .secret {
-            color: #ff0000;
-            font-weight: bold;
-        }
-
-        .nightmare {
-            color: black;
-            font-weight: bold;
-        }
-
-        .apex {
-            color: #9400d3;
-            font-weight: bold;
-        }
-
-        .event {
-            color: #808080;
-            font-weight: bold;
-        }
-
-        .modifiers, .calculator {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            font-size: 1.3em;
-            line-height: 1.8em;
-            text-align: left;
-        }
-
-        .calculator input[type="number"] {
-            width: 80px;
-            padding: 10px;
-            margin: 5px;
-            font-size: 1em;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .calculator button {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .calculator button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 20px 0;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1.2em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discord Mod Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #2c2f33;
+      color: #ffffff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #7289da;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      background: #23272a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 5px;
+      background: #99aab5;
+      color: #000;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #7289da;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5b6eae;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>FNTD Modded Value List</h1>
-    </header>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>Unit Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="uncommon">Uncommon</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td class="rare">Rare</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td class="epic">Epic</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td class="mythical">Mythical</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td class="secret">Secret</td>
-                    <td>75</td>
-                </tr>
-                <tr>
-                    <td class="nightmare">Nightmare</td>
-                    <td>125</td>
-                </tr>
-                <tr>
-                    <td class="apex">Apex</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td class="event">Event</td>
-                    <td>O/C</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <div class="modifiers">
-            <h2>Additional Value Modifiers</h2>
-            <ul>
-                <li><strong>Low Exist Count:</strong> +25% more value</li>
-                <li><strong>Shiny:</strong> +50% more value</li>
-                <li><strong>Shiny + Low Exist Count:</strong> +75% more value</li>
-                <li><strong>New Unit:</strong> +20% more value</li>
-            </ul>
-        </div>
+  <h1>Discord Moderator Application</h1>
+  <form action="https://formsubmit.co/8eocharis@gmail.com" method="POST">
+    <!-- FormSubmit Options -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="New Discord Mod Application!">
 
-        <div class="calculator">
-            <h2>Trading Calculator</h2>
-            <p>Enter the base value of your items and select applicable modifiers:</p>
-            <input type="number" id="baseValue" placeholder="Base Value">
-            <br>
-            <label>
-                <input type="checkbox" id="lowExist"> Low Exist (+25%)
-            </label>
-            <br>
-            <label>
-                <input type="checkbox" id="shiny"> Shiny (+50%)
-            </label>
-            <br>
-            <label>
-                <input type="checkbox" id="newUnit"> New Unit (+20%)
-            </label>
-            <br><br>
-            <button onclick="calculateValue()">Calculate Total Value</button>
-            <h3 id="totalValue">Total Value: 0</h3>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 FNTD Modded Value List. All rights reserved.</p>
-    </footer>
-    <script>
-        function calculateValue() {
-            const baseValue = parseFloat(document.getElementById('baseValue').value) || 0;
-            const lowExist = document.getElementById('lowExist').checked ? 0.25 : 0;
-            const shiny = document.getElementById('shiny').checked ? 0.50 : 0;
-            const newUnit = document.getElementById('newUnit').checked ? 0.20 : 0;
+    <label>Discord Username (with tag):</label>
+    <input type="text" name="Discord Username" required />
 
-            const totalModifiers = 1 + lowExist + shiny + newUnit;
-            const totalValue = baseValue * totalModifiers;
+    <label>User ID (optional):</label>
+    <input type="text" name="User ID" />
 
-            document.getElementById('totalValue').innerText = `Total Value: ${totalValue.toFixed(2)}`;
-        }
-    </script>
+    <label>Age:</label>
+    <input type="number" name="Age" required />
+
+    <label>Time Zone:</label>
+    <input type="text" name="Time Zone" />
+
+    <label>Country:</label>
+    <input type="text" name="Country" />
+
+    <label>How long have you been in the server?</label>
+    <textarea name="Server Duration"></textarea>
+
+    <label>How active are you (daily hours)?</label>
+    <input type="text" name="Activity Hours" />
+
+    <label>What times are you usually active?</label>
+    <input type="text" name="Active Times" />
+
+    <label>Moderation experience:</label>
+    <textarea name="Moderation Experience"></textarea>
+
+    <label>Why do you want to be a moderator?</label>
+    <textarea name="Reason for Applying"></textarea>
+
+    <label>Skills that make you a good mod:</label>
+    <textarea name="Skills"></textarea>
+
+    <label>How would you handle a disagreement?</label>
+    <textarea name="Conflict Resolution"></textarea>
+
+    <label>What would you do if someone was breaking the rules?</label>
+    <textarea name="Rule Violation Handling"></textarea>
+
+    <label>Scenario: Spamming inappropriate content</label>
+    <textarea name="Scenario 1"></textarea>
+
+    <label>Scenario: Friend breaks rules</label>
+    <textarea name="Scenario 2"></textarea>
+
+    <label>Scenario: Mod abusing power</label>
+    <textarea name="Scenario 3"></textarea>
+
+    <label>Anything else we should know?</label>
+    <textarea name="Additional Info"></textarea>
+
+    <label>Do you agree to follow all rules?</label>
+    <select name="Agreement" required>
+      <option value="">Select one</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <button type="submit">Submit Application</button>
+  </form>
 </body>
 </html>
